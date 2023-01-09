@@ -12,7 +12,7 @@ export DEBIAN_FRONTEND=noninteractive
 until [[ "${SECONDS_LEFT:=10}" = 0 ]]; do
   printf "Please wait %ss ...\n" "${SECONDS_LEFT}"
   sleep 0.5
-  SECONDS_LEFT=$(echo "${SECONDS_LEFT} - 0.5" | bc)
+  SECONDS_LEFT=$(echo "${SECONDS_LEFT} - 0.5")
 done
 unset SECONDS_LEFT
 
